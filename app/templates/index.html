@@ -1,3 +1,4 @@
+{% import 'macros.html' as macro%}
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,24 +15,18 @@
          <!-- Business News  -->
          <h3> Business News</h3>
          <ul>
-            {% for business_news in business %}
-                <li>{{ business_news.title}}</li>
-            {% endfor %}
+            {{ macro.displayNewsList(business)}}  
         </ul>
 
         <!-- Entertainment News  -->
         <h3> Entertainment News </h3>
          <ul>
-            {% for entertainment_news in entertainment %}
-                <li>{{ entertainment_news.title}}</li>
-            {% endfor %}
+            {{ macro.displayNewsList(entertainment)}}
         </ul>
         <!-- technology news -->
         <h3>Technology News</h3>
          <ul>
-            {% for technology_news in technology %}
-                <li>{{ technology_news.title}}</li>
-            {% endfor %}
+            {{ macro.displayNewsList(technology)}}
         </ul>
     </body>
 </html>
